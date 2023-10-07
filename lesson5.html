@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML DOM</title>
+    <script>
+        function test() {
+            var parentDiv = document.getElementById("test");
+            var firstChild = parentDiv.firstChild;
+            var secondChild = firstChild.nextSibling;
+        }
+
+        function addElement() {
+            var newPElement = document.createElement("p"); //khởi tạo element
+            var parentDiv = document.getElementById("test");
+            console.log(parentDiv.childNodes);
+            parentDiv.appendChild(newPElement); //gán newElement thành con của parentDiv 
+            var text = document.createTextNode('WD18310'); // khởi tạo 1 element text
+            newPElement.appendChild(text); //gán text thành node con của newPElement
+        }
+
+        function deleteElement() {
+            var parentDiv = document.getElementById("test");
+            parentDiv.removeChild(testInput);
+        }
+
+    </script>
+</head>
+<body>
+    <div id='hello'>Hello Javascript <span style="display:none;"> 2020</span></div> 
+    <script type="text/javascript"> 
+        var mydiv = document.getElementById('hello'); 
+        console.log(mydiv.textContent); 
+    </script>
+</body>
+</html>

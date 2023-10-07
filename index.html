@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MD18310</title>
+    <script type="text/javascript" src="calculator.js"></script>
+</head>
+<body>
+    <div style="justify-content: center;">
+        <h1>Máy tính</h1>
+        <div class="grid-container" style="width: 30%;">
+            <button onclick="toanhang(7)">7</button>
+            <button onclick="toanhang(8)">8</button>
+            <button onclick="toanhang(9)">9</button>
+            <button onclick="toantu('+')">+</button>
+            <button onclick="toanhang(4)">4</button>
+            <button onclick="toanhang(5)">5</button>
+            <button onclick="toanhang(6)">6</button>
+            <button onclick="toantu('-')">-</button>
+            <button onclick="toanhang(1)">1</button>
+            <button onclick="toanhang(2)">2</button>
+            <button onclick="toanhang(3)">3</button>
+            <button onclick="toantu('*')">*</button>
+            <button onclick="toanhang(0)">0</button>
+            <button onclick="lamlai()">C</button>
+            <button onclick="thuchien()">=</button>
+            <button onclick="toantu(':')">:</button>
+        </div>
+    </div>
+</body>
+</html>
+
+<style>
+    .grid-container {
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+    }
+</style>

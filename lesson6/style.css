@@ -1,0 +1,16 @@
+.newClass {
+    font-size: xx-large;
+    color: blue;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+
+.anHien {
+    display: none;
+}
+
+div {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
