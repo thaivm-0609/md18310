@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validate Form</title>
+    <script src="index.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form>
+        <label for="name">Tên đăng nhập</label>
+        <input type="text" required name="username">
+        <p id="errorName" class="error"></p>
+        <br>
+        <label for="oldPass">Mật khẩu cũ</label>
+        <input type="password" required name="oldPass">
+        <p id="errorOldPass" class="error"></p>
+        <br>
+        <label for="newPass">Mật khẩu mới</label>
+        <input type="password" required name="newPass" onchange="checkValidPass()">
+        <p id="errorNewPass" class="error"></p>
+        <br>
+        <label for="confirmNewPass">Xác nhận mật khẩu mới</label>
+        <input type="password" required name="confirmNewPass" onblur="checkConfirmPassword()">
+        <p id="errorConfirmPass" class="error"></p>
+        <br>
+        <input type="button" onclick="newFunction()" value="Đổi mật khẩu">
+    </form>
+</body>
+</html>

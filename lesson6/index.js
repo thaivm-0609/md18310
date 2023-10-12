@@ -1,20 +1,14 @@
 window.onload = function () {
-    // var arrayDivs = document.getElementsByTagName('div'); //lấy toàn bộ thẻ div
-    // for(let i=0; i<arrayDivs.length; i++) { //chạy vòng for để truy cập từng phần tử
-    //     arrayDivs[i].onmouseover = function () { // gán sự kiện di chuột đến phần tử
-    //         arrayDivs[i].style.backgroundColor = arrayDivs[i].id; //sự kiển đổi màu background bằng id
-    //     };
-    //     arrayDivs[i].addEventListener('mouseleave', function () {
-    //         console.log(1);
-    //         arrayDivs[i].style.backgroundColor = "white";
-    //     })
-    // }    
-    document.getElementById('image').onmouseover = function () {
-        document.getElementById('image').src = '294fb6e4-0a5d-4ff7-9a56-4aace3b60830.png';
-    }
-    document.getElementById('image').addEventListener('mouseout', function () {
-        document.getElementById('image').src = '42f3f16f6caf46202517e4bb4ebac5af.jpg';
-    })
+    var arrayDivs = document.getElementsByTagName('div'); //lấy toàn bộ thẻ div
+    console.dir(event);
+    for(let i=0; i<arrayDivs.length; i++) { //chạy vòng for để truy cập từng phần tử
+        arrayDivs[i].onmouseover = function () { // gán sự kiện di chuột đến phần tử
+            arrayDivs[i].style.backgroundColor = arrayDivs[i].id; //sự kiển đổi màu background bằng id
+        };
+        arrayDivs[i].addEventListener('mouseleave', function () {
+            arrayDivs[i].style.backgroundColor = "white";
+        })
+    }    
 }
 
 function addElement() {
@@ -48,12 +42,14 @@ function hienMau() {
     }
 }
 
-var listImages = [
-    '1920x1080-23689-A.C.-MilanPaolo-Maldini-HD-Wallpaper.png', 
-    '294fb6e4-0a5d-4ff7-9a56-4aace3b60830.png',
-    '42f3f16f6caf46202517e4bb4ebac5af.jpg',
-];
 
+
+//slide ảnh
+var listImages = [
+    'anh/1920x1080-23689-A.C.-MilanPaolo-Maldini-HD-Wallpaper.png', 
+    'anh/294fb6e4-0a5d-4ff7-9a56-4aace3b60830.png',
+    'anh/42f3f16f6caf46202517e4bb4ebac5af.jpg',
+];
 var currentImageIndex = 0;
 var intervalId;
 function hienThi() {
