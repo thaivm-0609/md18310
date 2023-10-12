@@ -44,7 +44,17 @@ function checkConfirmPassword() {
 }
 
 function uploadFiles(files) {
-    if (files.length != 0) {
-        document.getElementById('avatar').src = URL.createObjectURL(files[0]);
-    }
+    console.log(files[0]);
+    document.getElementById('avatar').src = URL.createObjectURL(files[0]);
+}
+
+function dinhVi() {
+    navigator.geolocation.getCurrentPosition(showPosition);
+}
+
+function showPosition(position) {
+    var kinhdo = position.coords.longitude;
+    var vido = position.coords.latitude;
+
+    document.getElementById('location').innerHTML = `Vi tri cua ban la kinh do ${kinhdo}, vi do ${vido} `;
 }
